@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 const HomeServices = (props) => {
-    const {name, trainer, topic, img, enroll, budget} = props.service
+    const {name, details, img, cost} = props.service
     return (
         <div className="col-md-3 col-12 mt-5">
             <Card  className="text-center  h-100">
@@ -10,17 +10,13 @@ const HomeServices = (props) => {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                    {topic}
+                    {details}
                     </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroupItem>Trainer: {trainer}</ListGroupItem>
-                    <ListGroupItem>Enrolled: {enroll}</ListGroupItem>
-                    <ListGroupItem>Price: {budget} TK</ListGroupItem>
+                    <ListGroupItem>Duration: {details}</ListGroupItem>
+                    <ListGroupItem>Price: {cost}</ListGroupItem>
                 </ListGroup>
-                <Card.Body>
-                    <Button variant="primary">Learn More</Button>
-                </Card.Body>
             </Card>
         </div>
     );

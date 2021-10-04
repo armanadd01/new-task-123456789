@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './components/Home/Home';
 import Services from './components/Services/Services';
 import About from './components/About/About';
-import Teachers from './components/Teachers/Teachers';
 import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -28,8 +28,8 @@ function App() {
           <Route path="/about">
             <About></About>
           </Route>
-          <Route path="/teachers">
-            <Teachers></Teachers>
+          <Route path="/contact">
+            <Contact></Contact>
           </Route>
           <Route exact path="*">
             <NotFound></NotFound>

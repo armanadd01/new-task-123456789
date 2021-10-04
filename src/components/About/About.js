@@ -1,5 +1,4 @@
 import React from 'react';
-import Teachers from '../Teachers/Teachers';
 import aboutImgOne from '../../images/about-img01.webp';
 import aboutImgTwo from '../../images/about-img02.webp';
 
@@ -24,7 +23,6 @@ const About = () => {
                     <img className="img-fluid" src={aboutImgTwo} alt="" />
                 </div>
             </div>
-            <Teachers></Teachers>
         </div>
     );
 };

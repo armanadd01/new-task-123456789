@@ -6,27 +6,24 @@ const Home = () => {
     const [services, setService] = useState([]);
 
     useEffect(() => {
-        fetch('./fakeDataDb.JSON')
+        fetch('./home.json')
         .then(res => res.json())
-        .then(data => setService(data.home))
+        .then(data => setService(data))
     },[])
     return (
         <div className="main container-fluid">
             <div className="row">
                 <div className="banner col-md-12 col-12">
-                    <div className="overlay text-center">
-                    <h1 className="text-center text-light fs-1">Let's Study Together</h1>
-                    <button className="btn btn-primary mt-5 fw-bold fs-4 px-5">About Us</button>
-                    </div>
+                    <h1 className="text-center text-dark fs-1">Let's Study Together</h1>
                 </div>
             </div>
             <div className=" py-5 mt-5 text-center">
                 <div className="container">
                     <div className="row service-section">
-                        <h1  className="py-5 my-5 border-bottom border-primary fs-3">Our Popular <span className="fs-2 fw-bold text-danger">Online Courses</span></h1>
+                        <h1  className="py-5 my-5 fs-3">Our Most Famous Courses </h1>
                         {
                             services.map(service => <HomeServices
-                                key={service.key}
+                                key={service.number}
                                 service={service}
                             >
 

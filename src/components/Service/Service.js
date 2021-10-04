@@ -1,11 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChalkboardTeacher, faMoneyBill, faUser } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 import { Button, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import './Service.css'
 
 const Service = (props) => {
-    const {name, trainer, topic, img, enroll, budget} = props.service
+    const {name, teacher, topic, img, date, cost, details} = props.service
     return (
         <div className="col-md-4 col-12 mt-5">
             <Card  className="text-center  h-100">
@@ -16,14 +14,12 @@ const Service = (props) => {
                     {topic}
                     </Card.Text>
                 </Card.Body>
-                <ListGroup className="d-flex flex-row justify-content-center align-items-center">
-                    <ListGroupItem className=" service_details"><FontAwesomeIcon className="icon text-primary" icon={faChalkboardTeacher} /> {trainer}</ListGroupItem>
-                    <ListGroupItem className=" service_details service-border"><FontAwesomeIcon className="icon text-primary" icon={faUser}/> {enroll}</ListGroupItem>
-                    <ListGroupItem className=" service_details"><FontAwesomeIcon className="icon text-primary" icon={faMoneyBill}/> {budget} TK</ListGroupItem>
+                <ListGroup className="">
+                    <ListGroupItem className=" service_details"> {teacher}</ListGroupItem>
+                    <ListGroupItem className=" service_details">{date}</ListGroupItem>
+                    <ListGroupItem className=" service_details">{details}</ListGroupItem>
+                    <ListGroupItem className=" service_details"> {cost} </ListGroupItem>
                 </ListGroup>
-                <Card.Body>
-                    <Button variant="primary">Learn More</Button>
-                </Card.Body>
             </Card>
         </div>
     );

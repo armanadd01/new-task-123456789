@@ -1,5 +1,5 @@
 import React from 'react';
-import notFound from '../../images/notfound.jpg';
+import notFound from '../../images/404.jpg';
 
 const NotFound = () => {
     return (
